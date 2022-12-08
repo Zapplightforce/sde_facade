@@ -3,13 +3,17 @@ package app;
 public class Main {
 
     public static void main(String[] args) {
-        Amplifier amp = new Amplifier("Top-O-Line Amplifier");
-        Tuner tuner = new Tuner("Top-O-Line AM/FM Tuner", amp);
-        DvdPlayer dvd = new DvdPlayer("Top-O-Line DVD Player", amp);
-        CdPlayer cd = new CdPlayer("Top-O-Line CD Player", amp);
-        Projector projector = new Projector("Top-O-Line Projector", dvd);
-        TheaterLights lights = new TheaterLights("Theater Ceiling Lights");
-        Screen screen = new Screen("Theater Screen");
-        PopcornPopper popper = new PopcornPopper("Popcorn Popper");
+
+
+        System.out.println("--------Turn on Entertainment System---------");
+        System.out.println(EntertainmentSystem.useSystem(Step.TurnOnMovie));
+        System.out.println(EntertainmentSystem.useSystem(Step.TurnOffMovie));
+        System.out.println(EntertainmentSystem.useSystem(Step.TurnOnMusic));
+        System.out.println(EntertainmentSystem.useSystem(Step.TurnOffMusic));
+        System.out.println(EntertainmentSystem.useSystem(Step.TurnOnRadio));
+        System.out.println(EntertainmentSystem.useSystem(Step.TurnOffRadio));
+        System.out.println("--------Turn off Entertainment System---------");
+        
+
     }
 }
